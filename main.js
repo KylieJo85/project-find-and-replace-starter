@@ -10,18 +10,68 @@ const replaceAllButton = document.querySelector(".replace-all-button")
 // this array.
 const rowElements = document.querySelectorAll(".row")
 
-// When you call the function belwo, it will get and return an INNER ARRAY
+
+
+// When you call the function below, it will get and return an INNER ARRAY
 // containing the cell elements for a given row.
 // Call this function from WITHIN your row elements loop. Then you will, in turn,
 // need to loop over the resulting cell elements. But where should this whole
 // NESTED LOOP go? Think through the user's experience: when should WHAT happen? 
-function getCellElements (currentRowElement) {
+function getCellElements(currentRowElement) {
     return currentRowElement.querySelectorAll(".cell")
 }
 
-
 // YOUR CODE GOES HERE
 
+replaceAllButton.addEventListener("click", function () {
+
+    let whatCurrentText = findInput.value
+    console.log(whatCurrentText)
+
+
+    let futureIngoingText = replaceInput.value
+    console.log(futureIngoingText)
+
+
+    for (let index = 0; rowElements.length <= 0; index++) {
+        let individualElements = rowElements[index]
+        console.log (individualElements)
+
+
+        function getCellElements(currentRowElement) {
+
+            let cellElementsArray = 0
+
+            for (let index = 0; index < currentRowElement; index++) {
+                cellElementsArray = getCellElements + currentRowElement
+            }
+            return (cellElementsArray)
+        }
+
+        console.log(getCellElements)
+
+
+        function checkForCellElement(whatCurrentText, futureIngoingText) {
+
+            
+            for (let index=0; index<futureIngoingText;index=+1){
+                if (whatCurrentText.includes(futureIngoingText))
+                    console.log("user-provided search string")
+            
+                
+            }
+            index++
+            
+            
+
+        }
+console.log (checkForCellElement)
+    }
+
+replaceInput.remove()=findInput.innerHTML
+
+     console.log ('success!')
+ 
 
 // One last thing: dedicate very careful attention to using variables and
 // naming them accurately.
@@ -36,3 +86,4 @@ function getCellElements (currentRowElement) {
 //
 // You can, of course, remove any comments in this starter project once
 // you have read them, if you prefer.
+})
