@@ -1,3 +1,5 @@
+//Colin contributed to this project by helping me to figure out where I was not understanding my code. 
+
 // You should NOT change the HTML or CSS in this project (at least until you reach
 // the bonus objectives). Focus on the JavaScript.
 
