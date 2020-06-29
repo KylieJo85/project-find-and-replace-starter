@@ -33,44 +33,39 @@ replaceAllButton.addEventListener("click", function () {
     console.log(futureIngoingText)
 
 
-    for (let index = 0; rowElements.length <= 0; index++) {
-        let individualElements = rowElements[index]
-        console.log (individualElements)
+    for (let index = 0; rowElements.length > index; index++) {
+       
 
+        
 
-        function getCellElements(currentRowElement) {
+            let cellElementsArray = getCellElements (rowElements[index])
 
-            let cellElementsArray = 0
-
-            for (let index = 0; index < currentRowElement; index++) {
-                cellElementsArray = getCellElements + currentRowElement
-            }
-            return (cellElementsArray)
+            for (let index = 0; index < cellElementsArray.length; index++) {
+        let findingString=cellElementsArray[index]
+        while ( findingString.innerHTML.includes (whatCurrentText)){
+            findingString.innerHTML=findingString.innerHTML.replace(whatCurrentText,futureIngoingText)
         }
-
-        console.log(getCellElements)
-
-
-        function checkForCellElement(whatCurrentText, futureIngoingText) {
-
-            
-            for (let index=0; index<futureIngoingText;index=+1){
-                if (whatCurrentText.includes(futureIngoingText))
-                    console.log("user-provided search string")
-            
-                
             }
-            index++
-            
-            
 
-        }
-console.log (checkForCellElement)
+        
+        
+
+        
+
+
+  
+
+            
+            
+            
+            
+        
+
     }
 
-replaceInput.remove()=findInput.innerHTML
 
-     console.log ('success!')
+
+    
  
 
 // One last thing: dedicate very careful attention to using variables and
